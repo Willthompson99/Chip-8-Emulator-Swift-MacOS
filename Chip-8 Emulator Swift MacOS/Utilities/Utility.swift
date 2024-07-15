@@ -16,7 +16,7 @@ class Utility {
         openPanel.canChooseDirectories = false
         openPanel.canCreateDirectories = false
         openPanel.canChooseFiles = true
-        openPanel.allowedContentTypes = [UTType.plainText]  // Assuming .ch8 files are plain text
+        openPanel.allowedContentTypes = [UTType.plainText]
 
         openPanel.begin { (result) -> Void in
             if result == .OK, let selectedFile = openPanel.url {
@@ -27,4 +27,3 @@ class Utility {
         }
     }
 }
-

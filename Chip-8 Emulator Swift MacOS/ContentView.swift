@@ -19,6 +19,12 @@ struct ContentView: View {
             Button("Select ROM File") {
                 filePickerViewModel.selectFile()
             }
+            DisplayView(chip8: filePickerViewModel.chip8)
+                .frame(width: 640, height: 320)
+                .background(Color.black)
+        }
+        .onAppear {
+            filePickerViewModel.chip8.run()
         }
     }
 }
